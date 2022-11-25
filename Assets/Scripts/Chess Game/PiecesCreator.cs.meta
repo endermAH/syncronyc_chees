@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f28bdd0643c50bc45901a3512d04ca49
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - blackMaterial: {instanceID: 0}
+  - whiteMaterial: {instanceID: 0}
+  - KnightBlackMaterial: {fileID: 2100000, guid: ac3f3592e84e8ba488af4d9907646ac9,
+      type: 2}
+  - KnightWhiteMaterial: {fileID: 2100000, guid: c0fa344633747f9439041f9b0cc322de,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
