@@ -13,7 +13,7 @@ public class CustomBuild
     {
         // TMP Get scenes list
         List<string> scenesToBuild = new List<string>();
-        scenesToBuild.Add("Scenes/Main");
+        scenesToBuild.Add("Assets/Scenes/Main");
             
         BuildTarget target = BuildTarget.StandaloneWindows;
         EditorUserBuildSettings.SwitchActiveBuildTarget(target);
