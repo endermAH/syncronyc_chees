@@ -11,10 +11,14 @@ public class CustomBuild
 
     static void BuildWindows()
     {
+        // TMP Get scenes list
+        List<string> scenesToBuild = new List<string>();
+        scenesToBuild.Add("Scenes/Main");
+            
         BuildTarget target = BuildTarget.StandaloneWindows;
         EditorUserBuildSettings.SwitchActiveBuildTarget(target);
         PlayerSettings.applicationIdentifier = Environment.GetEnvironmentVariable("PROJECT_BUILD_APP_ID");
-        BuildPipeline.BuildPlayer(GetScenes(), string.Format("{0}/{1}.exe" , outputProjectsFolder, PlayerSettings.applicationIdentifier), target, BuildOptions.None);
+        BuildPipeline.BuildPlayer(scenesToBuild.ToArray(), string.Format("{0}/{1}.exe" , outputProjectsFolder, PlayerSettings.applicationIdentifier), target, BuildOptions.None);
     }
     static string[] GetScenes()
     {
