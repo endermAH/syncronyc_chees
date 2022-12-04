@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.bugsnag.unitynotifier": {
+      "version": "https://github.com/bugsnag/bugsnag-unity-upm.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "22dfffc9b13090b8c59c663ed95aad2df6ec5212"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
