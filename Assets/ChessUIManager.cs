@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using DevToDev.Analytics;
 
 public class ChessUIManager : MonoBehaviour
 {
@@ -66,6 +67,7 @@ public class ChessUIManager : MonoBehaviour
 	{
 		GameOverScreen.SetActive(false);
 		GameModeSelectionScreen.SetActive(false);
+		DTDAnalytics.CustomEvent(eventName: "Select singleplayer mode");
 	}
 
 	public void OnMultiPlayerModeSelected()
@@ -73,6 +75,7 @@ public class ChessUIManager : MonoBehaviour
 		GameOverScreen.SetActive(false);
 		GameModeSelectionScreen.SetActive(false);
 		LevelSelectionPanel.SetActive(true);
+		DTDAnalytics.CustomEvent(eventName: "Select multiplayer mode");
 	}
 
 	public void OnMultiPlayerClassicModeSelected()
@@ -80,6 +83,7 @@ public class ChessUIManager : MonoBehaviour
 		GameOverScreen.SetActive(false);
 		GameModeSelectionScreen.SetActive(false);
 		LevelSelectionPanel.SetActive(true);
+		DTDAnalytics.CustomEvent(eventName: "Select multiplayer classic mode");
 	}
 
 	internal void OnGameFinished(TeamColor winner)
@@ -88,6 +92,7 @@ public class ChessUIManager : MonoBehaviour
 		GameOverScreen.SetActive(true);
 		WinPanel.SetActive(false);
 		LosePanel.SetActive(false);
+		DTDAnalytics.CustomEvent(eventName: "Game finished");
 
 		if (networkManager.IsWinner(winner))
 		{
@@ -107,6 +112,7 @@ public class ChessUIManager : MonoBehaviour
 	internal void OnGameFinishedSingle(TeamColor winner)
     {
 		OnGameLaunched();
+		DTDAnalytics.CustomEvent(eventName: "Game finished");
 
 		WinPanel.SetActive(false);
 		LosePanel.SetActive(false);

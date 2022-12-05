@@ -7,6 +7,15 @@
       "dependencies": {},
       "hash": "22dfffc9b13090b8c59c663ed95aad2df6ec5212"
     },
+    "com.devtodev.sdk.analytics": {
+      "version": "https://github.com/devtodev-analytics/package_Analytics.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
+      "hash": "dae05b13c9e586a2dcc62a102971fa0337cc9a7d"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -56,7 +65,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
